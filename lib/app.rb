@@ -14,5 +14,12 @@ get '/one_more_page' do
 end
 
 get '/cat' do
+  @name = ["Dafna", "Emily"].sample
   erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
+  erb :index
 end
